@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Enrollment Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js" defer></script>
+<style>
+body { font-family: Arial; padding: 20px; }
+#header { text-align: center; margin-bottom: 20px; }
+.container { max-width: 600px; margin: auto; }
+#footer { margin-top: 20px; text-align: center; }
+input[disabled] { background-color: #eee; }
+</style>
+</head>
+<body>
+<h1 id="header">Student Enrollment Form</h1>
+
+<div class="container">
+<form id="studentForm">
+    <div class="form-group">
+        <label for="rollNo">Roll No:</label>
+        <input type="number" class="form-control" id="rollNo">
+    </div>
+    <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" class="form-control" id="fullName" disabled>
+    </div>
+    <div class="form-group">
+        <label for="className">Class:</label>
+        <input type="text" class="form-control" id="className" disabled>
+    </div>
+    <div class="form-group">
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" class="form-control" id="birthDate" disabled>
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" class="form-control" id="address" disabled>
+    </div>
+    <div class="form-group">
+        <label for="enrollDate">Enrollment Date:</label>
+        <input type="date" class="form-control" id="enrollDate" disabled>
+    </div>
+
+    <button type="button" class="btn btn-success" id="saveBtn" onclick="saveStudent()" disabled>Save</button>
+    <button type="button" class="btn btn-warning" id="updateBtn" onclick="updateStudent()" disabled>Update</button>
+    <button type="button" class="btn btn-secondary" id="resetBtn" onclick="resetForm()">Reset</button>
+</form>
+</div>
+
+<button id="footer" class="btn btn-dark" onclick="resetForm()"></button>
+</body>
+</html>
